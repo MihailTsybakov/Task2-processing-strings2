@@ -38,7 +38,7 @@ int search(char* word, char* name_of_file){
         for (int j = 0; j < avg_len; j++){
             if ((string[j] != ' ')&&(string[j] != ',')&&(string[j] != '.')){
                 temp_len++;
-                temp = realloc(temp, temp_len*sizeof(char));
+                temp = (char*)realloc(temp, temp_len*sizeof(char));
                 temp[temp_len - 1] = string[j];
             }
             if ((string[j] == ' ')||(string[j] == ',')||(string[j] == '.')||(j == (avg_len -1))){
@@ -63,7 +63,7 @@ int search(char* word, char* name_of_file){
                 }
                 flag = 0;
                 temp_len = 0;
-                temp = realloc(temp, 0*sizeof(char));
+                temp = (char*)realloc(temp, 0*sizeof(char));
             }
         }
     }
