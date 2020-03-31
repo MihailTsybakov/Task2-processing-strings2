@@ -19,8 +19,16 @@ int search(char* word, char* name_of_file){
     avg_len = 0;
     input = fopen(name_of_file,"r");
     count = fopen(name_of_file,"r");
+    if (!input || !count){
+        printf("Error: cannot open file\n");
+        exit(2);
+    }
     min = INT_MAX;
     temp = (char*)malloc(temp_len*sizeof(char));
+    if (temp == NULL){
+        printf("Error: cannot allocate memory\n");
+        exit(3);
+    }
     while(fgets(scn_tmp, sizeof(scn_tmp), count) != NULL){
         number_of_strings++;
     }
