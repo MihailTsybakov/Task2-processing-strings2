@@ -75,7 +75,6 @@ int search(char* word, char* name_of_file){
             }
         }
     }
-    free(string);
     free(temp);
     fclose(input);
     fclose(count);
