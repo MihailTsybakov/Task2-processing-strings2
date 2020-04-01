@@ -94,6 +94,7 @@ int Autotest(void){
     if (test[0] == 'A'){
         printf("Autotest passed successfully\n");
     }
+    free(test);
     return 0;
 }
 int main(void){
